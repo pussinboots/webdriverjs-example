@@ -1,6 +1,6 @@
 var webdriver = require('selenium-webdriver');
 
-jasmine.getEnv().defaultTimeoutInterval = 10000;
+jasmine.getEnv().defaultTimeoutInterval = 30000;
 
 var driver = new webdriver.Builder().
     withCapabilities(webdriver.Capabilities.chrome(["no-sandbox"])).
