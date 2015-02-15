@@ -35,9 +35,7 @@ describe('basic play tests', function () {
 		driver.get('http://songs.bmg.com/mso/view/playlist/8616E09A9B4B2C53E0D2DD7B12B98631');
 		driver.findElement(webdriver.By.className('song__play-button')).click();
 		driver.findElement(webdriver.By.className('player__title__song-name')).getText().then(function(text) {
-			//driver.moveTo(driver.findElement(webdriver.By.className('player__progress-bar__bar')))
 			driver.findElement(webdriver.By.className('player__progress-bar__bar')).then(function(elem){
-				//driver.actions().mouseMove(elem, 100, 0).mouseClick().perform();
 				driver.actions().mouseMove(elem).click().perform();
 				driver.sleep(1000);
 				expect(text).toBe('Bossa Moon');
