@@ -38,6 +38,7 @@ describe('basic play tests', function () {
 			driver.findElement(webdriver.By.className('player__progress-bar__bar')).then(function(elem){
 				driver.actions().mouseMove(elem).click().perform();
 				driver.sleep(1000);
+				//expect missing that jump works
 				expect(text).toBe('Bossa Moon');
 				done();
 			}); 
